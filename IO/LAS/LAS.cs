@@ -134,7 +134,7 @@ namespace Ghost.IO.LAS
                     {
                         this.header.StartOfFirstExtendedVariableLengthRecord = br.ReadUInt64();
                         this.header.NumberOfExtendedVariableLengthRecords = br.ReadUInt32();
-                        this.header.NumberOfPointRecords = br.ReadUInt32();
+                        this.header.NumberOfPointRecords = br.ReadUInt64();
                         this.header.NumberOfPointsByReturn = new ulong[15];
                         for (int i = 0; i < 15; i++)
                             this.header.NumberOfPointsByReturn[i] = br.ReadUInt64();
